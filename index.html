@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Nhập dãy số nguyên</h2>
+        <div class="input-group">
+            <input type="number" id="inputNumber" placeholder="Nhập một số">
+            <button id="addNumber" onclick="addNumber()">Thêm số</button>
+        </div>
+        <div id="result">
+            <strong>Danh sách các số:</strong> <span id="numberList"></span>
+        </div>
+        <ul>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(1)">1. Tổng các số dương ▼</button>
+                <div id="feature1" class="feature-content collapse">
+                    <button onclick="calculateSumPositive()">Tính Tổng</button>
+                    <div id="resultSumPositive"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(2)">2. Đếm số dương ▼</button>
+                <div id="feature2" class="feature-content collapse">
+                    <button onclick="calculateCountPositive()">Đếm Số</button>
+                    <div id="resultCountPositive"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(3)">3. Tìm số nhỏ nhất ▼</button>
+                <div id="feature3" class="feature-content collapse">
+                    <button onclick="findMinNumber()">Tìm số nhỏ nhất</button>
+                    <div id="resultFindMin"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(4)">4. Tìm số dương nhỏ nhất ▼</button>
+                <div id="feature4" class="feature-content collapse">
+                    <button onclick="findMinPositive()" id="btnFindMinPositive">Tìm số dương nhỏ nhất</button>
+                    <div id="resultFindMinPositive"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(5)">5. Tìm số chẵn cuối cùng ▼</button>
+                <div id="feature5" class="feature-content collapse">
+                    <button onclick="findLastEvenNumber()">Tìm số chẵn cuối cùng</button>
+                    <div id="resultFindLastEven"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(6)">6. Đổi chỗ 2 giá trị ▼</button>
+                <div id="feature6" class="feature-content collapse">
+                    <div class="input-group">
+                        <input type="number" id="swapIndex1" placeholder="Nhập vị trí thứ nhất">
+                        <input type="number" id="swapIndex2" placeholder="Nhập vị trí thứ hai">
+                    </div>
+                    <button onclick="swapValues()">Đổi chỗ</button>
+                    <div id="resultSwap"></div>
+                </div>
+            </li>            
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(7)">7. Sắp xếp tăng dần ▼</button>
+                <div id="feature7" class="feature-content collapse">
+                    <button onclick="sortArrayAscending()">Sắp xếp</button>
+                    <div id="resultSortAscending"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(8)">8. Tìm số nguyên tố đầu tiên ▼</button>
+                <div id="feature8" class="feature-content collapse">
+                    <button onclick="findFirstPrime()">Tìm số nguyên tố</button>
+                    <div id="resultFindFirstPrime"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(9)">9. Đếm số nguyên trong mảng số thực ▼</button>
+                <div id="feature9" class="feature-content collapse">
+                    <button onclick="countIntegers()">Đếm số nguyên</button>
+                    <div id="resultCountIntegerInFloatArray"></div>
+                </div>
+            </li>
+            <li>
+                <button class="arrow-button" onclick="toggleCollapse(10)">10. So sánh số lượng số dương và âm ▼</button>
+                <div id="feature10" class="feature-content collapse">
+                    <button onclick="comparePositiveAndNegative()">So sánh</button>
+                    <div id="resultComparePositiveNegative"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
